@@ -2,9 +2,8 @@ from pydub import AudioSegment
 
 def hiPitchnSpeed(sound, level):
 
-    # 每次升高半音
-    octaves = 0.5
-    new_rate = int(sound.frame_rate * (level ** octaves))
+    # 每次升高(level個半音)
+    new_rate = int(sound.frame_rate * (level ** 0.5))
 
     hipitch_sound = sound._spawn(sound.raw_data, overrides={'frame_rate': new_rate})
     hipitch_sound = hipitch_sound.set_frame_rate(44100)
