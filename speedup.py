@@ -17,4 +17,4 @@ wf.setframerate(RATE * Change_RATE)
 wf.writeframes(signal)
 wf.close()
 
-'''成功加速，但會改變頻率'''
+'''加速音檔，但會改變頻率'''
