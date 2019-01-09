@@ -36,6 +36,10 @@ def speedUp():
 # 原頻率，速率下降
 def speedDn():
 	soundModifier(0, 0.5)
+	
+# 停止播放
+def stop():
+	sampler.remove(s1)
 
 s1 = Sound.from_file("D:\\music\\Bon Jovi\\Bounce\\It's my Life.mp3")
 sampler.play(s1)	
