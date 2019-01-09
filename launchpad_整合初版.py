@@ -115,6 +115,31 @@ class launchpad(tk.Frame):
 
 	def song3_start(self):
 		play(song3)
+		
+	
+	# 回到原頻率原速率
+	def resetBoth(self, sound):
+		sound.pitch_shift = 0
+		sound.stretch_factor = 1
+
+	# 頻率上升，原速率
+	def pitchUp(self, sound):
+		sound.pitch_shift = 1
+
+	# 頻率下降，原速率
+	def pitchDn(self, sound):
+		sound.pitch_shift = -1
+		
+	# 原頻率，速率上升
+	def speedUp(self, sound):
+		sound.stretch_factor = 2
+		
+	# 原頻率，速率下降
+	def speedDn(self, sound):
+		sound.stretch_factor = 0.5
+		
+	def stop(self, sound):
+		sampler.remove(sound)
 
 
 
